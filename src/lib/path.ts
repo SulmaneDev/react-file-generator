@@ -1,4 +1,5 @@
-import { join as JOIN } from "path";
+import { dirname, join as JOIN } from "path";
+import { fileURLToPath } from "url";
 
 /**
  * Resolves a given relative path from the current working directory.
@@ -14,4 +15,14 @@ import { join as JOIN } from "path";
  */
 export function join(path: string): string {
     return JOIN(process.cwd(), path);
+}
+/**
+ * Resolves a path relative to the project root from the current module.
+ * @param path Relative path to resolve
+ * @returns Absolute path
+ */
+export function relativeJoin(path: string): string {
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = dirname(__filename);
+    return JOIN(__dirname, path);
 }

@@ -1,6 +1,8 @@
 import type { Command } from "commander";
 import Generate from "../commands/generate.js";
 import GenerateA from "../actions/generate.js";
+import Init from "../commands/init.js";
+import InitA from "../actions/init.js";
 
 /**
  * Dispatch all commands and actions
@@ -9,5 +11,6 @@ import GenerateA from "../actions/generate.js";
 export default class CommandLoader {
     async load(cmd: Command): Promise<void> {
         new Generate(new GenerateA()).register(cmd);
+        new Init(new InitA()).register(cmd);
     }
 }

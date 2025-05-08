@@ -33,6 +33,6 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
   },
-  "include": ["src", "src/.templates", "src/.templates"],
+  "include": ["src", "./src/templates/**/*.txt"],
   "exclude": ["node_modules", "dist", "**/*.test.ts"],
 }
