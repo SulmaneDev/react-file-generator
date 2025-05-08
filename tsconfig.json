@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "ES2022",                        // Use modern JS syntax (e.g., top-level await)
+    "lib": ["ES2022"],                         // No DOM, just standard ES features
+    "useDefineForClassFields": true,           // Standard behavior for class fields
+
+    /* Modules */
+    "module": "ES2022",                        // Emit native ES modules
+    "moduleResolution": "node",                // Use Node.js module resolution
+    "esModuleInterop": true,                   // Allow default import from CommonJS
+    "allowSyntheticDefaultImports": true,      // Smooth interop with non-ESM
+    "resolveJsonModule": true,                 // Allow importing .json
+    "verbatimModuleSyntax": true,              // Preserve import/export syntax
+    "rootDir": "src",                          // Source directory
+    "outDir": "dist",                          // Output directory
+
+    /* Emit */
+    "declaration": true,                       // Generate .d.ts files
+    "declarationMap": true,                    // Enable source maps for .d.ts
+    "emitDeclarationOnly": false,
+    "sourceMap": true,
+    "inlineSources": true,
+    "removeComments": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+
+    /* Interop and Consistency */
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+}
