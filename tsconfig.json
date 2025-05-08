@@ -25,15 +25,14 @@
 
     /* Type Checking */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
 
+
     /* Interop and Consistency */
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+  "include": ["src", "src/.templates", "src/.templates"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"],
 }

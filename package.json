@@ -2,6 +2,10 @@
   "name": "react-tsx-generator",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
+  "bin": {
+    "rfg": "./dist/index.js"
+  },
   "scripts": {
     "build": "npx tsc"
   },
@@ -9,15 +13,21 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.15.15",
     "prettier": "^3.5.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "boxen": "^8.0.1",
     "chalk": "^5.4.1",
+    "cli-table3": "^0.6.5",
     "commander": "^13.1.0",
     "figlet": "^1.8.1",
-    "fs-extra": "^11.3.0"
+    "fs-extra": "^11.3.0",
+    "inquirer": "^12.6.0",
+    "log-symbols": "^7.0.0",
+    "ora": "^8.2.0"
   }
 }

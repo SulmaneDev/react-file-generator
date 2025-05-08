@@ -1,0 +1,13 @@
+{
+    "templates": {
+        "layout": "./src/templates/layout.tsx",
+        "page": "./src/templates/page.tsx",
+        "test:*": "./src/templates/tests/**",
+        "components": "./src/templates/component.tsx",
+        "js": "./src/templates/index.js",
+        "ts": "./src/templates/index.ts",
+        "html": "./src/templates/index.html",
+        "css": "./src/templates/index.css",
+        "scss": "./src/templates/index.scss"
+    }
+}

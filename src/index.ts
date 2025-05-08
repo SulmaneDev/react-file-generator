@@ -1,4 +1,7 @@
+#!/usr/bin/env node
+
 import { Command } from "commander";
+import CommandLoader from "./core/CommandLoader.js";
 
 /**
  * Initializes and parses command-line arguments using the Commander library.
@@ -6,6 +9,7 @@ import { Command } from "commander";
  */
 async function bootstrap() {
     const cmd = new Command();
+    await new CommandLoader().load(cmd);
     cmd.parseAsync(process.argv);
 }
 await bootstrap();
